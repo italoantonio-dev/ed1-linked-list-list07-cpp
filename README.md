@@ -1,52 +1,67 @@
 # Estrutura de Dados I — Lista 07
 
-Exercícios de listas encadeadas da disciplina Estrutura de Dados I.
+Coleção de exercícios de algoritmos sobre **listas simplesmente encadeadas**, desenvolvida em C++20 na disciplina Estrutura de Dados I.
 
-**Aluno:** Italo Antônio Costa Felisbino  
-**Curso:** ADS — IFTM
+Cada exercício possui seu próprio arquivo-fonte e alvo de compilação, permitindo estudar e executar os problemas de forma independente.
 
-## Estrutura
+## Exercícios
 
-Cada exercício possui um executável próprio e usa o `Node<T>` externo definido
-em `include/LinkedList.h`.
+| Arquivo | Problema |
+|---|---|
+| `Exer01_SortedInsertion.cpp` | Inserção ordenada em lista encadeada |
+| `Exer02_DeleteNodeWithoutHead.cpp` | Exclusão de um nó sem receber a referência para o início da lista |
+| `Exer03_ReverseLinkedList.cpp` | Inversão de uma lista encadeada |
+| `Exer04_MergeTwoSortedLists.cpp` | Intercalação de duas listas ordenadas |
+| `Exer05_RemoveNthFromEnd.cpp` | Remoção do n-ésimo elemento a partir do fim |
+
+## Organização
 
 ```text
-include/
-├── List.h
-└── LinkedList.h
-src/
-├── Exer01_SortedInsertion.cpp
-├── Exer02_DeleteNodeWithoutHead.cpp
-├── Exer03_ReverseLinkedList.cpp
-├── Exer04_MergeTwoSortedLists.cpp
-└── Exer05_RemoveNthFromEnd.cpp
-CMakeLists.txt
-README.md
+.
+├── include/
+│   ├── List.h
+│   └── LinkedList.h
+├── src/
+│   ├── Exer01_SortedInsertion.cpp
+│   ├── Exer02_DeleteNodeWithoutHead.cpp
+│   ├── Exer03_ReverseLinkedList.cpp
+│   ├── Exer04_MergeTwoSortedLists.cpp
+│   └── Exer05_RemoveNthFromEnd.cpp
+├── CMakeLists.txt
+└── README.md
 ```
 
-## Compilação e execução
+A estrutura auxiliar `Node<T>` é definida em `include/LinkedList.h` e utilizada pelos exercícios.
 
-No CLion, abra a pasta do projeto e execute individualmente os alvos
-`exercicio01` a `exercicio05` no perfil Debug.
+## Tecnologias e conceitos
 
-No terminal:
+- C++20
+- Templates e estruturas encadeadas
+- Ponteiros e manipulação de nós
+- Algoritmos de inserção, remoção, inversão e intercalação
+- CMake e CLion
+
+## Compilação
+
+Com CMake e um compilador compatível com C++20 instalados:
 
 ```powershell
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
 cmake --build build --config Debug
-.\build\Debug\exercicio01.exe
-.\build\Debug\exercicio02.exe
-.\build\Debug\exercicio03.exe
-.\build\Debug\exercicio04.exe
-.\build\Debug\exercicio05.exe
 ```
 
-Os executáveis mantêm os exemplos de entrada e saída presentes nos fontes.
-Os enunciados PDF não estavam disponíveis no workspace para uma conferência
-adicional de formatação.
+O projeto define os alvos `exercicio01` a `exercicio05`. Para executar um exercício no Windows, por exemplo:
 
-## Verificação executada
+```powershell
+.\build\Debug\exercicio01.exe
+```
 
-Todos os cinco alvos foram compilados em Debug com C++20 e executados com
-limite de tempo. O merge de listas foi corrigido para percorrer a lista uma
-única vez, evitando laço infinito.
+No CLion, abra a pasta do projeto e selecione o alvo desejado no perfil Debug.
+
+## Objetivo de aprendizagem
+
+Praticar a manipulação de listas encadeadas e desenvolver raciocínio sobre casos de borda, referências entre nós e percursos eficientes.
+ 
+## Contexto acadêmico
+
+Tecnologia em Análise e Desenvolvimento de Sistemas (ADS) — Instituto Federal do Triângulo Mineiro (IFTM).
